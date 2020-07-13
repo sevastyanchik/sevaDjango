@@ -1,7 +1,7 @@
 {% extends "landing/base.html" %}
+{%load crispy_forms_tags%}
 {%load static%}
-
-{% block content %}
+w{% block content %}
 
 <div class="container"> <!---fluid-->
     <div class="row">
@@ -15,7 +15,14 @@
                 </p>
             </div>
         </div>
-        <div class="col-md-2">
+        <div class="mt-4">
+                <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <input type="submit" value="Update"><br><br>
+            </form>
+            </div>
+
         </div>
     </div>
 </div>

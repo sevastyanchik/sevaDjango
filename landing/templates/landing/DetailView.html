@@ -1,0 +1,22 @@
+{% extends "landing/base.html" %}
+
+{% block content %}
+<div class="container"> <!---fluid-->
+    <div class="row">
+        <div class="col-md-2" style="background-color: #00CC99">
+        </div>
+        <div class="col-md-8" style="background-color: #99CCFF">
+        <div>
+            <h1>{{ elem.name }} </h1>
+            <h2>{{ elem.school }} </h2>
+            <h3>{{ elem.annotation }} </h3>
+            <p>{{ elem.data_create }} </p>
+        </div>
+        </div>
+        <div class="col-md-2" style="background-color: #00CC99">
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
